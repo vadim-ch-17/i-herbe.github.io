@@ -233,6 +233,13 @@ footer .footer__link:hover{
 .catalog{
 	background-color: #E5E5E5;
 }
+.catalog__card:hover .catalog__item-1 img{
+	
+	position: relative;
+	box-shadow: 5px 5px 15px 5px rgba(0,0,0, 0.40);
+	top:-1px;
+	transition: all 0.4s ease;
+}
 /*-----------------*/
 .button-card{
 	text-transform: uppercase;

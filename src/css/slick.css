@@ -36,6 +36,9 @@
     font-size: 1rem;
     color: #09ffd9;
 }
+.slider .fa:hover{
+    cursor: pointer;
+}
 
 .slider .slick-dots{
     display: flex;
