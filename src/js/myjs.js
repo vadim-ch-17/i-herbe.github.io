@@ -1,12 +1,18 @@
 import {data} from './cardDate.js'
+import { testimonials } from './testimonialsData.js'
 import'./slider.js'
 import './navigation.js'
 document.addEventListener('DOMContentLoaded', () => {
     const catalogHead = document.querySelector('#catalog__head')
-    if (catalogHead) {
-
+    const footer = document.querySelector('#footer')
+    const testimonialsContainer = document.querySelector('#testimonials')
+    if ( footer ) 
+        setDate(footer)
+    if (catalogHead)
         innerCard(data,catalogHead)
-    }
+    if(testimonialsContainer)
+        setTestimonials(testimonialsContainer, testimonials)
+
 })
 
 function innerCard(catalogCardObj,elem){
@@ -26,4 +32,30 @@ function innerCard(catalogCardObj,elem){
                     </div>`);
        })
     }
-
+function setDate(footer){
+    const dateElement = footer.querySelector('.date')
+    dateElement.insertAdjacentHTML('beforeend', `${new Date().getFullYear()}`) 
+}
+function setTestimonials(elem,data){
+    const container = elem.querySelector('.slider')
+    data.forEach( i => {
+        container.insertAdjacentHTML('beforeend',`
+            <div class="slider_item testimonials__card">
+                <div class="testimonials__card-name d-flex justify-content-between">
+                    <div class="testimonials__card-name">${i.name}</div>
+                    <div>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill bi-star_no-active"></i>
+                        <i class="bi bi-star-fill bi-star_no-active"></i>
+                    </div>
+                </div>
+                <div class="testimonials__card-purchase d-flex justify-content-start ">
+                    <i class="bi bi-check-circle-fill pr-2"></i><span>${i.purchase}</span>
+                </div>
+                <div class="testimonials__card-text mt-3 ">${i.text}</div>
+            </div>
+        `)
+    })
+}
