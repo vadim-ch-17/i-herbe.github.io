@@ -179,8 +179,7 @@ footer .footer__link:hover{
 	background-position: center;
 }
 .banner_textblock{
-	padding-left: 5%;
-	padding: 15% 0;
+	padding: 15% 5% 0 15%;
 
 }
 .banner_textblock p{
@@ -203,7 +202,7 @@ footer .footer__link:hover{
 	background-color:  #90E6DD;
 	color: #fff;
 	border: none;
-	text-decoration: uppercase;
+	text-transform: uppercase;
 	text-align: center;
 }
 /*SLIDER*/
@@ -239,6 +238,7 @@ footer .footer__link:hover{
 	box-shadow: 5px 5px 15px 5px rgba(0,0,0, 0.40);
 	top:-1px;
 	transition: all 0.4s ease;
+	cursor: pointer ;
 }
 /*-----------------*/
 .button-card{
@@ -249,11 +249,13 @@ footer .footer__link:hover{
 	background-color: #fff;
 	border: 2px solid #90E6DD;
 	color: #90E6DD;
+	transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 .button-card:hover{
 	background-color: #90E6DD;
 	border: 2px solid #90E6DD;
 	color: #fff;
+	transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 .card__item-price{
 	font-weight: 600;
