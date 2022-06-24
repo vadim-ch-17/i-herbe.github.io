@@ -82,6 +82,8 @@ footer p{
 }
 .btn-search:hover {
 	background-color: #90E699;
+	transition: background-color 0.3s ease;
+
 }
 .btn-search{
 	border:none;
@@ -92,7 +94,7 @@ footer p{
 	border-radius: 100%;
 	background-color: #90E6DD;
 	color: #fff;
-
+	transition: background-color 0.3s ease;
 }
 
 .header__burger,
@@ -124,13 +126,14 @@ footer p{
 	font-weight: bold;
 	font-size: 12px;
 	line-height: 16px;
-
+	transition: color 0.3s ease;
 }
 .header__link:hover,
 .header__link-top:hover,
 footer .footer__link:hover{
 	text-decoration: none;
 	color: #90E6DD;
+	transition: color 0.3s ease;
 }
 
 .header__burger.active:before{
@@ -179,7 +182,7 @@ footer .footer__link:hover{
 	background-position: center;
 }
 .banner_textblock{
-	padding: 15% 5% 0 15%;
+	padding: 15% 0 15%;
 
 }
 .banner_textblock p{
